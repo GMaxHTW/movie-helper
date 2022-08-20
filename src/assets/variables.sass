@@ -1,0 +1,28 @@
+// Variables
+$accentMain: #FF0000
+$accentDark: #770000
+$textColor: #020202
+
+
+// Responsive Functions
+$break1 : 1200px
+$break10 : 1000px
+$break2 : 850px
+$break3 : 600px
+$break4 : 450px
+
+@mixin screen-min($min)
+  @media (min-width: $min)
+    @content
+
+@mixin screen-max($max)
+  @media (max-width: $max - 1)
+    @content
+
+@mixin screen-minmax($min, $max)
+  @media (min-width: $min) and (max-width: $max - 1)
+    @content
+
+@mixin touch-screen()
+  @media (hover: none)
+    @content

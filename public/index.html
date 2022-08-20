@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="de" />
+    <meta http-equiv="accept-language" content="de-DE,de;en-US,en" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <meta name="msapplication-TileColor" content="#FF556D">
+    <meta name="theme-color" content="#FF556D">
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "Service",
+            "serviceType": "Software Development and Web applications",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "<%= htmlWebpackPlugin.options.title %>",
+                "url": "<%= htmlWebpackPlugin.options.url %>",
+                "logo": "<%= htmlWebpackPlugin.options.url + htmlWebpackPlugin.options.logo %>",
+                "image": "<%= htmlWebpackPlugin.options.url + htmlWebpackPlugin.options.image %>",
+                "description": "<%= htmlWebpackPlugin.options.description %>",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "<%= htmlWebpackPlugin.options.street %>",
+                    "addressLocality": "<%= htmlWebpackPlugin.options.city %>",
+                    "addressRegion": "<%= htmlWebpackPlugin.options.city %>",
+                    "postalCode": "<%= htmlWebpackPlugin.options.plz %>",
+                    "addressCountry": "DE"
+                },
+                "telephone" : "<%= htmlWebpackPlugin.options.phone %>",
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "52.5091406",
+                    "longitude": "13.5020567"
+                },
+                "hasMap": "https://www.google.com/maps/place/S%C3%B6nke+Tenckhoff+Digital+Service/@52.5091406,13.5020567,17z/data=!3m1!4b1!4m5!3m4!1s0x47a851c5af217e45:0x3e855bc314b5d053!8m2!3d52.5091406!4d13.5020567",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "<%= htmlWebpackPlugin.options.phone %>",
+                    "email": "<%= htmlWebpackPlugin.options.mail %>",
+                    "contactType": "customer service",
+                    "areaServed": "DE"
+                }
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "DE"
+            }
+        }
+    </script>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>" />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="rating" content="general" />
+    <meta name="author" content="<%= htmlWebpackPlugin.options.team %>" />
+    <meta name="copyright" content="<%= htmlWebpackPlugin.options.title %>" />
+
+
+    <!-- OPEN GRAPH DATA -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:image" content="<%= htmlWebpackPlugin.options.url + htmlWebpackPlugin.options.image %>" />
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>" />
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>" />
+
+
+    <!-- STRUCT DATA -->
+    <meta property="business:contact_data:street_address" content="<%= htmlWebpackPlugin.options.street %>" />
+    <meta property="business:contact_data:locality"       content="<%= htmlWebpackPlugin.options.city %>" />
+    <meta property="business:contact_data:postal_code"    content="<%= htmlWebpackPlugin.options.plz %>" />
+    <meta property="business:contact_data:country_name"   content="Deutschland" />
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>
