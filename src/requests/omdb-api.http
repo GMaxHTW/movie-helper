@@ -1,0 +1,13 @@
+### Request for getting API reachability
+GET http://localhost:3000/status
+Content-Type: application/json
+
+### Request for register Method
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "username": "sotenck",
+  "password": "superPW",
+  "email": "sotenck@gmail.com"
+}
